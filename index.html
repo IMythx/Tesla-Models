@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tesla Inc</title>
+  </head>
+  <body>
+    <nav>
+      <h2 class="logo">Tesla</h2>
+    </nav>
+    <section class="content">
+      <div class="about box">
+        <img src="BackImg.jpg" alt="" />
+        <div class="info">
+          <h2>About</h2>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem
+          facilis, similique, vero ullam, praesentium ex laudantium neque ab
+          maxime error enim quidem quae. Numquam libero dignissimos nihil
+          aliquam, nisi fugit, illum doloremque perspiciatis excepturi non
+          corporis ipsa ab neque consequatur, autem debitis. Debitis, dolores!
+          Ipsam voluptates placeat quam rem sequi, sint omnis asperiores animi
+          illum rerum expedita vel assumenda maxime labore id hic enim libero
+          deleniti excepturi et perspiciatis consectetur ullam accusantium
+          exercitationem. Repudiandae, quasi non? Illo totam inventore amet
+          harum facere, eum nulla, eveniet, impedit sunt soluta officiis sit!
+          Recusandae quos officiis ipsum mollitia qui tempore ea, consequuntur
+          amet.
+        </div>
+      </div>
+      <div class="box">
+        <img src="M3.jpg" alt="" />
+        <div class="info">
+          <h2 style="--clr: blue">Model-3</h2>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          aliquam delectus cum? Exercitationem facilis quaerat optio culpa omnis
+          delectus, nemo dolorem iusto, reprehenderit architecto officia.
+          Aliquam rem nihil quia perferendis optio quibusdam accusamus amet
+          quisquam at ut. Eos quo a quae distinctio veniam maxime officiis.
+        </div>
+        <button class="button">
+          <p>order now</p>
+          <ion-icon class="icon" name="arrow-forward-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="box">
+        <img src="Mx.jpg" alt="" />
+        <div class="info">
+          <h2 style="--clr: Yellow">Model-X</h2>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          aliquam delectus cum? Exercitationem facilis quaerat optio culpa omnis
+          delectus, nemo dolorem iusto, reprehenderit architecto officia.
+          Aliquam rem nihil quia perferendis optio quibusdam accusamus amet
+          quisquam at ut. Eos quo a quae distinctio veniam maxime officiis.
+        </div>
+        <button class="button">
+          <p>order now</p>
+          <ion-icon class="icon" name="arrow-forward-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="box">
+        <img src="MY.jpg" alt="" />
+        <div class="info">
+          <h2 style="--clr: Grey">Model-Y</h2>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          aliquam delectus cum? Exercitationem facilis quaerat optio culpa omnis
+          delectus, nemo dolorem iusto, reprehenderit architecto officia.
+          Aliquam rem nihil quia perferendis optio quibusdam accusamus amet
+          quisquam at ut. Eos quo a quae distinctio veniam maxime officiis.
+        </div>
+        <button class="button">
+          <p>order now</p>
+          <ion-icon class="icon" name="arrow-forward-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="box">
+        <img src="MS.jpg" alt="" />
+        <div class="info">
+          <h2 style="--clr: red">Model-S</h2>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          aliquam delectus cum? Exercitationem facilis quaerat optio culpa omnis
+          delectus, nemo dolorem iusto, reprehenderit architecto officia.
+          Aliquam rem nihil quia perferendis optio quibusdam accusamus amet
+          quisquam at ut. Eos quo a quae distinctio veniam maxime officiis.
+        </div>
+        <button class="button">
+          <p>order now</p>
+          <ion-icon class="icon" name="arrow-forward-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="models-cont">
+        <div class="text">Models</div>
+        <div class="models">
+          <div
+            class="smImg-cont"
+            style="width: 6vw; height: 6vw; --clr: blue; --num: 1"
+          >
+            <img class="smImg" src="M3.jpg" alt="" />
+          </div>
+          <div
+            class="smImg-cont"
+            style="width: 6vw; height: 6vw; --clr: Yellow; --num: 2"
+          >
+            <img class="smImg" src="Mx.jpg" alt="" />
+          </div>
+          <div
+            class="smImg-cont"
+            style="width: 6vw; height: 6vw; --clr: Grey; --num: 3"
+          >
+            <img class="smImg" src="MY.jpg" alt="" />
+          </div>
+          <div
+            class="smImg-cont"
+            style="width: 6vw; height: 6vw; --clr: red; --num: 4"
+          >
+            <img class="smImg" src="MS.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>Made with ❤ by iMythx</footer>
+    <script>
+      let models = document.querySelector(".models");
+      let text = document.querySelector(".text");
+      let imgCont = document.querySelectorAll(".smImg-cont");
+      let logo = document.querySelector(".logo");
+      const boxs = document.querySelectorAll(".box");
+      const buttons = document.querySelectorAll(".button");
+      function activeModel() {
+        text.classList.toggle("active");
+        models.classList.toggle("active");
+      }
+      text.addEventListener("click", activeModel);
+      function activeCar() {
+        imgCont.forEach((img) => img.classList.remove("active"));
+        this.classList.add("active");
+        logo.style.setProperty("color", "#000");
+        logo.style.setProperty("--beforewidth", "0%");
+        setTimeout((e) => {
+          logo.style.setProperty("--trans", "0.5s");
+          logo.style.setProperty("--beforewidth", "100%");
+        }, 100);
+        logo.style.setProperty("--trans", "0s");
+        logo.style.setProperty(
+          "--beforeclr",
+          this.style.getPropertyValue("--clr")
+        );
+
+        boxs.forEach((box, index) => {
+          box.style.setProperty("opacity", "0");
+          if (index == this.style.getPropertyValue("--num")) {
+            box.style.setProperty("opacity", "1");
+          }
+        });
+        buttons.forEach((button) => {
+          button.style.backgroundColor = this.style.getPropertyValue("--clr");
+        });
+      }
+      imgCont.forEach((img) => img.addEventListener("click", activeCar));
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

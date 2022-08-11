@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: black;
+
+  text-align: center;
+  font-size: 2em;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+nav h2 {
+  --beforewidth: 0;
+  color: #fff;
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 3px;
+  position: relative;
+  display: inline;
+}
+nav h2::before {
+  content: "Tesla";
+  position: absolute;
+  color: var(--beforeclr);
+  text-align: center;
+  background-color: transparent;
+  font-family: "Permanent Marker", cursive;
+  font-size: inherit;
+  letter-spacing: 3px;
+  transition: var(--trans);
+  -webkit-transition: var(--trans);
+  -moz-transition: var(--trans);
+  -ms-transition: var(--trans);
+  -o-transition: var(--trans);
+  overflow: hidden;
+  line-height: 69px;
+  width: var(--beforewidth);
+}
+.content {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("istockphoto-1266528796-612x612.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.box {
+  position: absolute;
+  width: 62%;
+  height: 90%;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 8px #000;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.box.about {
+  opacity: 1;
+}
+
+.box img {
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-left: -23%;
+}
+.box .info {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-left: 2vw;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 11vw;
+  height: 4vw;
+  font-size: 1.5vw;
+  line-height: 4vw;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+}
+button p {
+  display: inline-block;
+  position: absolute;
+  left: 12px;
+  top: -2px;
+}
+button .icon {
+  position: absolute;
+  top: 14px;
+  right: 8px;
+}
+.box .info h2 {
+  text-align: center;
+}
+.box .info h2 {
+  color: var(--clr);
+}
+.models-cont {
+  width: 10vw;
+  height: 40vw;
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+}
+.models-cont .text {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  font-size: 2.9vw;
+  font-family: "DM Serif Display", serif;
+  width: 10vw;
+  height: 10vw;
+  text-align: center;
+  line-height: 10vw;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  box-shadow: 0 0 8px #000;
+}
+.text::selection {
+  background-color: transparent;
+}
+.models-cont .text.active {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+.models-cont .models {
+  height: 0vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  gap: 3vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  box-shadow: 0 0 5px #000;
+  visibility: hidden;
+}
+.models.active {
+  height: 40vw;
+  visibility: visible;
+}
+.models-cont .models div {
+  cursor: pointer;
+  position: relative;
+}
+.models-cont .models div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.models-cont .models div::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  color: #fff;
+  left: 130%;
+  top: 25%;
+  font-size: 2em;
+  white-space: nowrap;
+  text-shadow: 0 0 10px var(--clr);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  width: 0;
+}
+.models-cont .models div.active::after {
+  animation: animate 0.5s linear 1;
+  -webkit-animation: animate 0.5s linear 1;
+  animation-fill-mode: forwards;
+}
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 9vw;
+  }
+}
+.models-cont .text:not(.active) + .models div::after {
+  display: none;
+}
+.models-cont .models div:nth-child(1):after {
+  content: "Model-3";
+}
+.models-cont .models div:nth-child(2):after {
+  content: "Model-X";
+}
+.models-cont .models div:nth-child(3):after {
+  content: "Model-Y";
+}
+.models-cont .models div:nth-child(4):after {
+  content: "Model-S";
+}
+.models-cont .models div.active img {
+  box-shadow: 0 0 20px var(--clr);
+}
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  min-height: 4vw;
+  line-height: 4vw;
+}

@@ -5,9 +5,11 @@ let logo = document.querySelector(".logo");
 const boxs = document.querySelectorAll(".box");
 const buttons = document.querySelectorAll(".button");
 const modelh2 = document.querySelectorAll(".info h2");
+const icon = document.querySelector(".icon-2");
 function activeModel() {
   text.classList.toggle("active");
   models.classList.toggle("active");
+  icon.classList.toggle("active");
 }
 text.addEventListener("click", activeModel);
 function activeCar() {

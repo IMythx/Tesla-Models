@@ -308,6 +308,9 @@ footer {
   nav h2::before {
     line-height: 35px;
   }
+  .content {
+    height: 772px;
+  }
   .box {
     height: 60%;
     top: 60%;
@@ -323,6 +326,7 @@ footer {
     margin-left: -17%;
   }
   .models-cont {
+    top: 40px;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);

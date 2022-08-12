@@ -319,6 +319,10 @@ footer {
   }
   .box .info {
     font-size: 12px;
+    justify-content: initial;
+  }
+  .box .info p {
+    margin-top: 50px;
   }
   .box img {
     width: 20vw;
@@ -371,6 +375,9 @@ footer {
   }
   button {
     width: 65px;
+    height: 21px;
+    font-size: 8px;
+    line-height: 21px;
   }
   button p {
     display: inline-block;

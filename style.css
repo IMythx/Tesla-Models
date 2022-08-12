@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 nav {
@@ -126,12 +128,22 @@ button .icon {
   top: 14px;
   right: 8px;
 }
-.box .info h2 {
+.box .info div {
   text-align: center;
 }
-.box .info h2 {
+.box:not(.about) .info h2 {
+  display: inline-block;
   color: var(--clr);
+  width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
 }
+@keyframes widthh {
+  100% {
+    width: 100%;
+  }
+}
+
 .models-cont {
   width: 10vw;
   height: 40vw;
@@ -216,7 +228,7 @@ button .icon {
   color: #fff;
   left: 130%;
   top: 25%;
-  font-size: 2em;
+  font-size: 2vw;
   white-space: nowrap;
   text-shadow: 0 0 10px var(--clr);
   overflow: hidden;

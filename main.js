@@ -4,6 +4,7 @@ let imgCont = document.querySelectorAll(".smImg-cont");
 let logo = document.querySelector(".logo");
 const boxs = document.querySelectorAll(".box");
 const buttons = document.querySelectorAll(".button");
+const modelh2 = document.querySelectorAll(".info h2");
 function activeModel() {
   text.classList.toggle("active");
   models.classList.toggle("active");
@@ -29,6 +30,13 @@ function activeCar() {
   });
   buttons.forEach((button) => {
     button.style.backgroundColor = this.style.getPropertyValue("--clr");
+  });
+  modelh2.forEach((h2, index) => {
+    if (this.style.getPropertyValue("--num") == index) {
+      h2.style.setProperty("animation", "widthh 2s linear 1 forwards");
+    } else {
+      h2.style.setProperty("animation", "none");
+    }
   });
 }
 imgCont.forEach((img) => img.addEventListener("click", activeCar));

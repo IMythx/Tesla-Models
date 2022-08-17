@@ -399,6 +399,9 @@ footer p:nth-child(2) {
       right: 4px;
     }
   }
+  .models-cont .models div {
+    cursor: none;
+  }
   .models-cont .models div::after {
     left: 5%;
     top: 127%;

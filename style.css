@@ -321,7 +321,7 @@ footer p:nth-child(2) {
     line-height: 35px;
   }
   .content {
-    height: 772px;
+    height: calc(100vh - 81px);
   }
   .box {
     height: 60%;
@@ -433,5 +433,42 @@ footer p:nth-child(2) {
     margin-top: initial;
     font-size: 5px;
     opacity: 0.7;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .content {
+    height: calc(100vh - (89px + 4vw));
+  }
+  .box {
+    height: 60%;
+  }
+  .models-cont {
+    top: 23vw;
+    left: 2vw;
+    width: 14vw;
+    height: 60vw;
+  }
+  .models-cont .text {
+    width: 14vw;
+    height: 14vw;
+    line-height: 14vw;
+  }
+  .models-cont .models {
+    top: 16%;
+  }
+  .models-cont .models div {
+    width: 9vw;
+    height: 9vw;
+  }
+  .models.active {
+    height: 52vw;
+  }
+  .box .info {
+    margin-left: 13px;
+  }
+  .box img {
+    width: 23vw;
+    height: 23vw;
+    margin-left: -18%;
   }
 }

@@ -82,6 +82,9 @@ nav h2::before {
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
 }
+.box:not(.about) {
+  visibility: hidden;
+}
 .box.about {
   opacity: 1;
 }
@@ -161,10 +164,10 @@ button .icon {
 }
 .models-cont .text {
   border-radius: 50%;
-  -webkit-border-radius: ;
-  -moz-border-radius: ;
-  -ms-border-radius: ;
-  -o-border-radius: ;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   background-color: #000;
   color: #fff;
   font-size: 2.9vw;
@@ -308,6 +311,9 @@ footer p:nth-child(2) {
   opacity: 0.7;
 }
 @media (max-width: 768px) {
+  * {
+    cursor: none;
+  }
   nav {
     font-size: 1em;
   }
@@ -358,6 +364,7 @@ footer p:nth-child(2) {
     overflow: visible;
   }
   .models-cont .text {
+    cursor: none;
     width: 70px;
     height: 70px;
     left: 35%;
@@ -398,9 +405,6 @@ footer p:nth-child(2) {
     100% {
       right: 4px;
     }
-  }
-  .models-cont .models div {
-    cursor: none;
   }
   .models-cont .models div::after {
     left: 5%;

@@ -28,6 +28,7 @@ function activeCar() {
     box.style.setProperty("opacity", "0");
     if (index == this.style.getPropertyValue("--num")) {
       box.style.setProperty("opacity", "1");
+      box.style.setProperty("visibility", "visible");
     }
   });
   buttons.forEach((button) => {

@@ -6,6 +6,7 @@ const boxs = document.querySelectorAll(".box");
 const buttons = document.querySelectorAll(".button");
 const modelh2 = document.querySelectorAll(".info h2");
 const icon = document.querySelector(".icon-2");
+const mainContent = document.querySelector(".content");
 function activeModel() {
   text.classList.toggle("active");
   models.classList.toggle("active");
@@ -43,3 +44,17 @@ function activeCar() {
   });
 }
 imgCont.forEach((img) => img.addEventListener("click", activeCar));
+window.onload = () => {
+  if (window.outerHeight > window.outerWidth) {
+    mainContent.style.setProperty("--height", "100vh");
+  } else {
+    mainContent.style.setProperty("--height", "100vw");
+  }
+};
+window.onresize = () => {
+  if (window.outerHeight > window.outerWidth) {
+    mainContent.style.setProperty("--height", "100vh");
+  } else {
+    mainContent.style.setProperty("--height", "100vw");
+  }
+};
